@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Package</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Package</h1>
+        <form id="trackingForm">
+            <label for="trackingCode">Enter your tracking code:</label>
+            <input type="text" id="trackingCode" name="trackingCode" required>
+            <button type="submit">Track</button>
+            <p id="errorMessage" style="color: red; display: none;">Invalid tracking code. Please try again.</p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
