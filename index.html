@@ -1,13 +1,27 @@
-document.getElementById('trackingForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const trackingCode = document.getElementById('trackingCode').value;
-    const validCode = '202409fedxh43gshsy344uiopp7lmbd';
-    
-    if (trackingCode === validCode) {
-        document.getElementById('errorMessage').style.display = 'none';
-        document.getElementById('orderDetails').style.display = 'block';
-    } else {
-        document.getElementById('errorMessage').style.display = 'block';
-        document.getElementById('orderDetails').style.display = 'none';
-    }
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Package</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Package</h1>
+        <form id="trackingForm">
+            <label for="trackingCode">Enter your tracking code:</label>
+            <input type="text" id="trackingCode" name="trackingCode" required>
+            <button type="submit">Track</button>
+            <p id="errorMessage" style="color: red; display: none;">Invalid tracking code. Please try again.</p>
+        </form>
+
+        <!-- Banner and Button to check order -->
+        <div id="orderDetails" style="display: none; margin-top: 20px;">
+            <h2>Order from Nigeria to Sweden</h2>
+            <button onclick="window.location.href='order.html'">Check Order</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
