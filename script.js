@@ -4,8 +4,10 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
     const validCode = '202409fedxh43gshsy344uiopp7lmbd';
     
     if (trackingCode === validCode) {
-        window.location.href = 'order.html';
+        document.getElementById('errorMessage').style.display = 'none';
+        document.getElementById('orderDetails').style.display = 'block';
     } else {
         document.getElementById('errorMessage').style.display = 'block';
+        document.getElementById('orderDetails').style.display = 'none';
     }
 });
